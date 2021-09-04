@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>doc</title>
+	<script src="index.js" defer></script>
+	<style type="text/css">
+	#animation {
+		width: 30px;
+		height: 30px;
+		padding: 60px;
+		background-color: black;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+		<div id="animation"
+		onmouseover="mOver()"
+		onmouseout="mOut()" 
+		>
+			<p>hover me</p>
+		</div>
+		<br>
+		<div id="animation"
+		onmousedown="mDown(this)"
+		onmouseup="mUp(this)" 
+		>
+			<p>click</p>
+		</div>
+		<p id="demo"></p>
+</body>
+</html>
