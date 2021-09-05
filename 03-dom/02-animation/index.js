@@ -12,7 +12,7 @@ function startAnimatio(){
 	function frame(){
 		if(pos == 35){
 			pos = 0;
-			// clearInterval(id);
+			clearInterval(id);
 		}else{
 			pos++;
 			elem.style.top = pos +	'rem';
@@ -60,7 +60,7 @@ function startAnimatio(){
 function test(){
 	let elem = document.getElementById('animation3');
 	let psdsos = 0;
-	let ids = setInterval(frame,50);
+	let ids = setInterval(frame,10);
 	let marsdgin = 55;	
 	function frame(){
 		if(psdsos == 40 && marsdgin == 15){
