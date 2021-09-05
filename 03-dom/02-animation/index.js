@@ -11,7 +11,8 @@ function startAnimatio(){
 
 	function frame(){
 		if(pos == 35){
-			clearInterval(id);
+			pos = 0;
+			// clearInterval(id);
 		}else{
 			pos++;
 			elem.style.top = pos +	'rem';
