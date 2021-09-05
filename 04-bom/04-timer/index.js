@@ -16,11 +16,16 @@ let myTime = setInterval(myTimer,1000);
  	clearInterval(myTime);
  }
 
+let stoptimer = false;
+function stopTimer(){
+	stoptimer = true;
+}
+
 
  (function write(){
 	let el =document.getElementById('timer');
 	let time = 30;
-	let id = setInterval(frame,1000);
+	var id = setInterval(frame,1000);
 	function frame(){
 		if (time <= 0) {
 			clearInterval(id);
@@ -30,9 +35,9 @@ let myTime = setInterval(myTimer,1000);
 			time--;
 			el.innerHTML = time; 
 		}
+	if (stoptimer == true) {
+		clearInterval(id);
+	}
 
 	}
-	function stopTimer(){
- 		clearInterval(id);
-	 }
 })();
