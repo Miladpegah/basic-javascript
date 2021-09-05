@@ -45,6 +45,7 @@ function startAnimatio(){
 	let margin = 40;	
 	function frame(){
 		if(pos == 37 && margin == 3){
+			test();
 			clearInterval(id);
 		}else{
 			pos++;
@@ -55,3 +56,21 @@ function startAnimatio(){
 		}
 	}
 })();
+function test(){
+	let elem = document.getElementById('animation3');
+	let psdsos = 0;
+	let ids = setInterval(frame,50);
+	let marsdgin = 55;	
+	function frame(){
+		if(psdsos == 40 && marsdgin == 15){
+			clearInterval(ids);
+			clearInterval(id);
+		}else{
+			psdsos++;
+			marsdgin--;
+			elem.style.width = psdsos * 2 + '%';
+			elem.style.height = psdsos * 2 + '%';
+			elem.style.margin = marsdgin + '%';
+		}
+	}
+}
