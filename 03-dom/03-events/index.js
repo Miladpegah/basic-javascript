@@ -7,12 +7,21 @@ function mOut(){
 	document.getElementById('demo').innerHTML = '';
 }
 
-function mDown(id){
-	id.style.backgroundColor = 'orange';
-	id.innerHTML = "Release Me!";
-}
+
+let up;
 function mUp(id){
 	id.style.backgroundColor = 'gold';
 
 	id.innerHTML = 'Tank you';
+	up = setTimeout(blackDiv,2000);
+}
+function mDown(id){
+	id.style.backgroundColor = 'orange';
+	id.innerHTML = "Release Me!";
+	clearInterval(up);
+}
+
+function blackDiv(){
+	document.getElementById('div2').style.backgroundColor = 'black';
+	document.getElementById('div2').innerHTML = "Click again";
 }
