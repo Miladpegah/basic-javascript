@@ -42,10 +42,9 @@ function startAnimatio(){
 	let elem = document.getElementById('animation2');
 	let pos = 0;
 	let id = setInterval(frame,50);
-	let margin = 40;
-
+	let margin = 40;	
 	function frame(){
-		if(pos == 40 && margin == 0){
+		if(pos == 37 && margin == 3){
 			clearInterval(id);
 		}else{
 			pos++;
@@ -54,7 +53,5 @@ function startAnimatio(){
 			elem.style.height = pos +	'rem';
 			elem.style.margin = margin + '%';
 		}
-			let test = elem.style.margin;
-			console.log(test);
 	}
 })();
