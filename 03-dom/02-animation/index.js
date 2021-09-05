@@ -35,11 +35,26 @@ function startAnimatio(){
 		}
 
 	}
-	// let test = frame();
-	// function test1(){
-	// 	for (let i = 0; i < test.length; i++){
-	// 		el.innerHTML += test[i];
-	// 	}
-	// }
-	// setInterval(test1(),100);
+})();
+
+
+(function(){
+	let elem = document.getElementById('animation2');
+	let pos = 0;
+	let id = setInterval(frame,50);
+	let margin = 40;
+
+	function frame(){
+		if(pos == 40 && margin == 0){
+			clearInterval(id);
+		}else{
+			pos++;
+			margin--;
+			elem.style.width = pos +	'rem';
+			elem.style.height = pos +	'rem';
+			elem.style.margin = margin + '%';
+		}
+			let test = elem.style.margin;
+			console.log(test);
+	}
 })();
